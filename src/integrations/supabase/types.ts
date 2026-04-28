@@ -14,7 +14,36 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      revenue_events: {
+        Row: {
+          amount_usd: number
+          chain: string
+          created_at: string
+          id: string
+          meta: Json | null
+          source: string
+          wallet_hash: string | null
+        }
+        Insert: {
+          amount_usd: number
+          chain: string
+          created_at?: string
+          id?: string
+          meta?: Json | null
+          source: string
+          wallet_hash?: string | null
+        }
+        Update: {
+          amount_usd?: number
+          chain?: string
+          created_at?: string
+          id?: string
+          meta?: Json | null
+          source?: string
+          wallet_hash?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
