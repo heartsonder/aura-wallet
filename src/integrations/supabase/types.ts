@@ -49,16 +49,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      log_revenue_event: {
-        Args: {
-          _amount_usd: number
-          _chain: string
-          _meta?: Json
-          _source: string
-          _wallet_hash?: string
-        }
-        Returns: string
-      }
+      [_ in never]: never
     }
     Enums: {
       [_ in never]: never
